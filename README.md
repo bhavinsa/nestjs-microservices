@@ -1,8 +1,31 @@
 ## Installation
 
 ```bash
-$ npm install
+$ git clone https://github.com/bhavinsa/nestjs-microservices.git
+$ cd nestjs-microservices
 ```
+
+## For application,  
+
+```
+$ cd application
+$ npm install
+$ npm run start
+
+```
+## For User microservices
+
+```
+$ cd user-microservices
+$ npm install
+$ npm run start
+
+```
+NOTE: We need to keep both application running.
+
+Open this URL and check http://localhost:3002
+This will return data from user-microservices.
+
 
 ## Running the app
 
