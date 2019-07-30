@@ -21,7 +21,7 @@ $ npm install
 $ npm run start
 
 ```
-NOTE: We need to keep both application and user-microservices running.
+NOTE: Keep both application and user-microservices running.
 
 Open this URL and check http://localhost:3002
 This will return data from user-microservices.
