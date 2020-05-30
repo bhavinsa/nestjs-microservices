@@ -7,11 +7,13 @@ import { MicroserviceOptions } from '@nestjs/common/interfaces/microservices/mic
 
 async function bootstrap() {
   const app = await NestFactory.createMicroservice(AppModule, {
-      transport: Transport.TCP,
-		options: {
-		port: 3001,
-  },
+    transport: Transport.TCP,
+    options: {
+      host: 'user-microservices',
+      port: 3001,
+    },
   });
-  await app.listen(() => console.log('MoviesService is running.'));
+  // await app.listen(() => console.log('user service is running.'));
+  await app.listen(() => console.log(`user service is running!!!.`))
 }
 bootstrap();

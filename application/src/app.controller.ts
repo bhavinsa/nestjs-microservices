@@ -11,15 +11,20 @@ export class AppController {
     this.client = ClientProxyFactory.create({
       transport: Transport.TCP,
       options: {
-		port: 3001,
+        host: 'user-microservices',
+		    port: 3001,
 	},
     });
   }
 
-  @Get()
+  @Get('/app')
+	getUserApi() {
+		return {'name':'app'};
+  }
+  
+  @Get('/data')
   listMovies() {
     const pattern = { cmd: 'LIST_MOVIES' };
-
     return this.client.send<string[]>(pattern, []);
   }
 }

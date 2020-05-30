@@ -1,0 +1,21 @@
+version: '3.5'
+services:
+  user-microservices:
+    build: './user-microservices'
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./user-microservices:/src
+    environment:
+      FLASK_ENV: development
+
+  application:
+    build: './application'
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./application:/code
+    environment:
+      FLASK_ENV: development
+    depends_on: 
+      - user-microservices

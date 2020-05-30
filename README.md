@@ -30,8 +30,11 @@ This will return data from user-microservices.
 ## Running the app
 
 ```bash
-# development
-$ npm run start
+# Docker development
+$ docker-compose build --no-cache
+$ docker-compose up
+
+Open this URL and check data  http://localhost:3000/data
 
 # watch mode
 $ npm run start:dev
